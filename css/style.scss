@@ -186,6 +186,13 @@ body {
             cursor: pointer;
             display: none;
         }
+        .cart_icon {
+            font-size: 40px;
+            color: #004583;
+            font-weight: 500;
+            cursor: pointer;
+            display: none;
+        }
     }
     .nav__menu {
         width: 100%;
@@ -309,15 +316,30 @@ body {
 .nav__menu-modal {
     width: 100%;
     height: auto;
-    background-color: rgb(227, 241, 237);
+    background-color: #fff;
     z-index: 25;
     position: absolute;
+    top: -100%;
     padding: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     border-radius: 0 0 30px 30px;
+    transition: 0.7s;
+    .menu_modal_kres {
+        position: absolute;
+        font-size: 40px;
+        top: 15px;
+        right: 20px;
+        color: #777;
+        cursor: pointer;
+        font-weight: 600;
+        transition: 0.4s;
+        &:hover {
+            color: #000;
+        }
+    }
     .simple__nav-time {
         display: flex;
         align-items: flex-start;
@@ -425,6 +447,10 @@ body {
             }
         }
     }
+}
+
+.transfor {
+    top: 0;
 }
 
 @media screen and (max-width: 1200px) {
@@ -636,7 +662,7 @@ body {
                         font-size: 15px;
                     }
                     p {
-                        font-size: 10px;
+                        font-size: 12px;
                     }
                 }
                 .simple__nav-ambit {
@@ -644,7 +670,7 @@ body {
                         font-size: 15px;
                     }
                     a {
-                        font-size: 10px;
+                        font-size: 12px;
                     }
                 }
             }
@@ -659,30 +685,30 @@ body {
             .simple__nav_call-number {
                 .simple__nav-call1 {
                     p {
-                        font-size: 10px;
+                        font-size: 12px;
                     }
                     .call__phone-number {
                         i {
-                            font-size: 12px;
+                            font-size: 13px;
                         }
                         span {
                             a {
-                                font-size: 10px;
+                                font-size: 12px;
                             }
                         }
                     }
                 }
                 .simple__nav-call2 {
                     p {
-                        font-size: 10px;
+                        font-size: 12px;
                     }
                     .call__phone-number {
                         i {
-                            font-size: 12px;
+                            font-size: 13px;
                         }
                         span {
                             a {
-                                font-size: 10px;
+                                font-size: 12px;
                             }
                         }
                     }
@@ -730,4 +756,89 @@ body {
     }
 }
 
-@media screen and (max-width: 770px) {}
+@media screen and (max-width: 770px) {
+    .navbar {
+        .simple__navbar {
+            .simple__nav_time-ambit {
+                display: none;
+            }
+            .simple__nav-logo {
+                width: 150px;
+                height: 70px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .simple__nav_call-number {
+                display: none;
+            }
+            .menu_icon {
+                display: block;
+            }
+            .cart_icon {
+                display: block;
+            }
+        }
+        .nav__menu {
+            padding: 0;
+            .nav__menu-list {
+                width: 50%;
+                .container {
+                    width: 100%;
+                    .dropdown {
+                        font-size: 14px;
+                        background-color: #BB2822;
+                    }
+                    .dropdown .select {
+                        padding: 12px 30px;
+                        font-weight: bold;
+                        font-size: 18px;
+                        span {
+                            color: #fff;
+                            background: transparent;
+                        }
+                    }
+                    .dropdown .select>i {
+                        font-size: 15px;
+                        color: #fff;
+                    }
+                    .dropdown .dropdown-menu {
+                        width: 100%;
+                        li {
+                            padding: 15px 30px;
+                            font-size: 16px;
+                        }
+                    }
+                }
+                .nav__menu_list-item {
+                    display: none;
+                }
+            }
+            .menu__search-input {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                position: relative;
+                input {
+                    padding: 12px 70px 12px 30px;
+                    border: none;
+                    border-radius: 0;
+                    font-size: 18px;
+                    background-color: #004583;
+                    color: #fff;
+                    &::placeholder {
+                        font-size: 18px;
+                        color: #fff;
+                    }
+                }
+                i {
+                    right: 30px;
+                    font-size: 18px;
+                    color: #fff !important;
+                }
+            }
+        }
+    }
+}

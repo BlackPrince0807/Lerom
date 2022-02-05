@@ -10,4 +10,15 @@ $('.dropdown').click(function() {
 
 // Menu modal
 
-const hamburgerIcon = document.getElementsByClassName('hamburger__menu-icon');
+const menuIcon = document.querySelector(".menu_icon");
+const menuModal = document.querySelector(".nav__menu-modal");
+const menuKres = document.querySelector(".menu_modal_kres");
+
+
+menuIcon.addEventListener("click", () => {
+    menuModal.classList.add('transfor');
+});
+
+menuKres.addEventListener("click", () => {
+    menuModal.classList.remove('transfor');
+})
