@@ -464,7 +464,7 @@ body {
   z-index: 25;
   position: absolute;
   top: -100%;
-  padding: 50px;
+  padding: 100px 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -642,6 +642,92 @@ body {
 
 .transfor {
   top: 0;
+}
+
+.header__slide {
+  width: 100%;
+  background-image: url("../image/Rectangle.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header__slide .swiper {
+  width: 100%;
+  height: auto;
+  padding: 100px 0;
+}
+
+.header__slide .swiper .swiper-wrapper {
+  width: 65%;
+  margin: auto;
+}
+
+.header__slide .swiper .swiper-wrapper .swiper-slide h3 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 50px;
+  letter-spacing: -0.5px;
+}
+
+.header__slide .swiper .swiper-wrapper .swiper-slide h5 {
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: -0.5px;
+  color: #fff;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.header__slide .swiper .swiper-wrapper .swiper-slide i {
+  font-weight: normal;
+  font-size: 18px;
+  letter-spacing: -0.5px;
+  color: #fff;
+}
+
+.header__slide .swiper .swiper-wrapper .swiper-slide .slide_icon {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 40px;
+}
+
+.header__slide .swiper .swiper-wrapper .swiper-slide .slide_icon .icon_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 40px;
+}
+
+.header__slide .swiper .swiper-wrapper .swiper-slide .slide_icon .icon_text i {
+  font-size: 25px;
+  border-radius: 100%;
+  background-color: #fff;
+  padding: 20px;
+  color: #004583;
+  margin-right: 10px;
+}
+
+.header__slide .swiper .swiper-wrapper .swiper-slide .slide_icon .icon_text span b {
+  font-weight: 600;
+  font-size: 21px;
+  letter-spacing: -0.5px;
+  color: #fff;
+}
+
+.header__slide .swiper .swiper-wrapper .swiper-slide .slide_icon .icon_text span p {
+  font-weight: normal;
+  font-size: 12px;
+  letter-spacing: -0.5px;
+  color: #fff;
 }
 
 @media screen and (max-width: 1200px) {
@@ -891,6 +977,9 @@ body {
 }
 
 @media screen and (max-width: 770px) {
+  .navbar .simple__navbar {
+    padding: 5px 30px;
+  }
   .navbar .simple__navbar .simple__nav_time-ambit {
     display: none;
   }
